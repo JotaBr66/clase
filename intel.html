@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="invoice-container">
+        <div class="invoice-header">
+            <div class="invoice-number">
+                <label for="invoice-number">N°:</label>
+                <input type="text" id="invoice-number">
+            </div>
+            <div class="invoice-date">
+                <label for="invoice-date">FECHA:</label>
+                <input type="date" id="invoice-date">
+            </div>
+        </div>
+        <div class="customer-info">
+            <label for="customer-name">Nombre:</label>
+            <input type="text" id="customer-name">
+            <label for="customer-address">Direccion:</label>
+            <input type="text" id="customer-address">
+        </div>
+        <table class="invoice-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NOMBRE PRODUCTO</th>
+                    <th>PRECIO</th>
+                    <th>CANTIDAD</th>
+                    <th>SUBTOTAL</th>
+                </tr>
+            </thead>
+            <tbody id="invoice-items">
+                <!-- Items will be added here dynamically -->
+            </tbody>
+        </table>
+        <button id="add-item">Agregar Producto</button>
+        <div class="invoice-total">
+            <label for="total">TOTAL:</label>
+            <input type="text" id="total" readonly>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
